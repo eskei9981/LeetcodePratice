@@ -1,0 +1,2 @@
+# LeetcodePratice
+Coding Practice Note

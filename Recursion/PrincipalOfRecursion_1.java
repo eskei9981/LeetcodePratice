@@ -1,6 +1,6 @@
 package Recursion;
 
-public class PrincipalOfRecursion {
+public class PrincipalOfRecursion_1 {
 
     /**
 

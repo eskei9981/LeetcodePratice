@@ -178,6 +178,10 @@ public class ReverseLinkedList_8 {
 
         head.next.next = head;
         head.next = null;
+        //5->4->null
+        //5->4->3->null
+        //5->4->3->2->null
+        //5->4->3->2->1->null
 
         return newHead;
     }

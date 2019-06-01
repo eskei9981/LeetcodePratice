@@ -37,6 +37,8 @@ public class ReverseLinkedList_8 {
 
 //        printListNode(reverseListMySolutionRecursive(node_1));
 
+        printListNode(reverseListMySolutionRecursive(node_1));
+
     }
 
     public static void printListNode(ListNode head) {
@@ -49,7 +51,6 @@ public class ReverseLinkedList_8 {
 
         System.out.print("NULL");
         System.out.println();
-        System.out.println("-------------------");
 
     }
 
@@ -153,24 +154,33 @@ public class ReverseLinkedList_8 {
     }
 
 
+    /**
+     * Runtime : 0ms
+     * Memory : 36.2Mb
+     * Time Complexity : O(n)
+     * Space Complexity : O(n)
+     */
+    public static ListNode reverseListMySolutionRecursive(ListNode head) {
 
-//    public static ListNode reverseListMySolutionRecursive(ListNode head) {
-//
-//        if (head == null || head.next == null) {
-//            return head;
-//        }
-//
-//        ListNode prev = null;
-//        ListNode nextTmp = head.next;
-//        head.next = prev;
-//
-//        ListNode current = reverseListMySolutionRecursive(nextTmp);
-//        prev = head;
-//
-//        current.next = prev;
-//
-//        return prev;
-//    }
+        if (head == null || head.next == null) {
+            return head;
+        }
+
+        System.out.println("bf head = " + head.val);
+
+        ListNode newHead = reverseListMySolutionRecursive(head.next);
+
+        System.out.println("start printing newHead");
+        printListNode(newHead);
+        System.out.println("end printing newHead");
+
+        System.out.println("af head = " + head.val);
+
+        head.next.next = head;
+        head.next = null;
+
+        return newHead;
+    }
 
 
     public static ListNode reverseListIterativeSolution(ListNode head) {
@@ -202,4 +212,3 @@ public class ReverseLinkedList_8 {
 
 
 }
-

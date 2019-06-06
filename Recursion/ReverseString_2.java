@@ -68,6 +68,7 @@ public class ReverseString_2 {
      * Iterative
      * runtime: 1ms
      * memory: 50.4MB
+     * Time complexity: O(n)
      */
     public static void reverseStringIterative2(char[] s) {
         int start = 0;
@@ -90,6 +91,7 @@ public class ReverseString_2 {
      * Recursive
      * runtime: 2ms
      * memory: 53.4MB
+     * Time complexity: O(n)
      */
     public static void reverseStringRecursive(char[] s) {
         reverseStringRecursiveByIndex(s, 0);
